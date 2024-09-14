@@ -1,11 +1,12 @@
 import {getWindowManager} from "./win";
 import {getApplicationMenu} from "./menu";
-import {getCommunicationManager} from "./communication";
-import {getApplicationTray} from './tray';
+import {getControllerManager} from "./controller";
+import {getServiceManager} from "./service";
 
 export async function initModules() {
-  await getCommunicationManager();
+  await getControllerManager();
   await getWindowManager();
   await getApplicationMenu();
-  await getApplicationTray();
+  // await getApplicationTray();
+  await getServiceManager();
 }

@@ -1,21 +1,13 @@
 <template>
-  <div class="h-screen w-screen flex flex-col">
-    <div class="h-[50px] w-full bg-pink-300 draggable">
-      <Header/>
-    </div>
-    <div class="w-full flex-1 relative bg-yellow-50">
-      <div class="absolute h-full w-full overflow-hidden">
-        <router-view/>
-      </div>
-    </div>
+  <div class="relative flex h-screen w-screen flex-row">
+    <router-view></router-view>
   </div>
 </template>
 
-<script setup lang="ts">
-
-import Header from "@/components/Header.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-
+:deep(.simplebar-scrollbar::before) {
+  background-color: oklch(var(--bc));
+}
 </style>

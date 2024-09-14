@@ -1,5 +1,5 @@
-import {app, Tray, NativeImage, Menu} from "electron";
-import {TRAY_IMAGE} from "../../const.ts";
+import {app, Menu, NativeImage, Tray} from "electron";
+import {TRAY_IMAGE} from "../../config.ts";
 
 let applicationTray: ApplicationTray | null = null;
 
