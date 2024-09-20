@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/* data-picker 样式*/
+:root {
+    /* vue-popper*/
+    --popper-theme-background-color: oklch(var(--b1));
+    --popper-theme-background-color-hover: oklch(var(--b1));
+    --popper-theme-text-color: oklch(var(--bc)/1);;
+    --popper-theme-border-width: 0px;
+    --popper-theme-border-style: solid;
+    --popper-theme-border-radius: 6px;
+    --popper-theme-padding: 0px;
+    --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+
+    /*vue-datepicker*/
+
+    .dp__theme_dark {
+        --dp-background-color: oklch(var(--b1));
+        --dp-text-color: oklch(var(--bc)/1);
+        --dp-hover-color: oklch(var(--p));
+        --dp-hover-text-color: oklch(var(--bc)/1);
+        --dp-primary-color: oklch(var(--p));
+        --dp-primary-disabled-color: oklch(var(--p));
+        --dp-primary-text-color: white;
+        --dp-secondary-color: oklch(var(--bc) / .4);
+        --dp-border-color: oklch(var(--b1));
+    }
+
+    .dp__theme_light {
+        --dp-background-color: oklch(var(--b1));
+        --dp-text-color: oklch(var(--bc)/1);
+        --dp-hover-color: oklch(var(--p)/0.5);
+        --dp-hover-text-color: oklch(var(--bc)/1);
+        --dp-primary-color: oklch(var(--p));
+        --dp-primary-disabled-color: oklch(var(--p));
+        --dp-primary-text-color: white;;
+        --dp-secondary-color: oklch(var(--bc) / .4);
+        --dp-border-color: oklch(var(--b1));
+    }
+}
+
 .draggable {
     -webkit-app-region: drag;
 }
+
+.no-draggable {
+    -webkit-app-region: no-drag;
+}
+
+.icon-disabled {
+    @apply pointer-events-none text-base-content/50
+}
+

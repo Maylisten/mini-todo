@@ -1,1 +1,1 @@
-export {useCounterStore} from "./count.ts";
+export {useThemeStore} from "./theme";
